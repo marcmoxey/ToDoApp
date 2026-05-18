@@ -21,25 +21,48 @@ function Login() {
         setLoading(false);
     }
 
-    return (
-        <div>
-            <h1>Login</h1>
-           <form onSubmit={handleLogin}>
-                <div>
-                    <label>Email</label>
-                    <input title='Email' type="email" value={email} onChange={e => setEmail(e.target.value)} required />
-                </div>
-                <div>
-                    <label>Password</label>
-                    <input title='Password' type='password' value={password} onChange={e => setPassword(e.target.value)} required />
-                </div>
-                {error && <p style={{color: 'red'}}>{error}</p>}
-                <button title='submit' type='submit' disabled={loading}>
-                    {loading ? 'Logging in...' : 'login'}
-                </button>
-            </form> 
+return (
+  <div className="app">
+    <div className="login-wrap">
+      <h1>Todo App</h1>
+      <p className="sub">sign in to continue</p>
+
+      <form onSubmit={handleLogin}>
+        <div className="field">
+          <label>Email</label>
+          <input title='email'
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </div>
-    )
+
+        <div className="field">
+          <label>Password</label>
+          <input title='password'
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+
+        {error && <p className="err-msg">{error}</p>}
+
+        <button className="btn-primary" type="submit" disabled={loading}>
+          {loading ? (
+            <>
+              <span className="spinner" /> logging in...
+            </>
+          ) : (
+            "login"
+          )}
+        </button>
+      </form>
+    </div>
+  </div>
+);
 }
 
 export default Login

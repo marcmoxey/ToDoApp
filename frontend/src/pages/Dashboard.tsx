@@ -22,16 +22,21 @@ function Dashboard({ session }: Props) {
     headers: { Authorization: `Bearer ${session.access_token}` },
   };
 
-  const fetchTodos = async () => {
-    try {
-      const { data } = await axios.get<Todo[]>("/api/todo", authHeaders);
-      setTodos(data);
-    } catch {
-      setError("Failed to load todos");
-    } finally {
-      setLoading(false);
+const fetchTodos = async () => {
+  try {
+    const { data } = await axios.get<Todo[]>("/api/todo", authHeaders);
+    setTodos(data); // empty array is fine — TodoList handles it
+  } catch (err) {
+    // Only fires on a real API failure (500, network error, auth error)
+    if (axios.isAxiosError(err) && err.response?.status === 401) {
+      setError("Session expired — please log in again");
+    } else {
+      setError("Failed to load todos — please try again");
     }
-  };
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleCreate = async (task: string) => {
     try {
@@ -85,50 +90,49 @@ function Dashboard({ session }: Props) {
   // Get the user's email from the session to show in the welcome message
   const userEmail = session.user?.email ?? "user";
 
-  return (
-    <div>
-      <Navbar onLogout={handleLogout} />
-
-      <div className="app">
-        <div className="dash">
-          {/* Welcome message shown at the top of the dashboard */}
-          <p className="welcome-msg">welcome, {userEmail}</p>
-
-          <div className="dash-header">
-            <h1>Dashboard</h1>
-          </div>
-
-          <div className="stats">
-            <div className="stat">
-              <span>{todos.length}</span>total
-            </div>
-            <div className="stat">
-              <span>{todos.filter((t) => t.isComplete).length}</span>done
-            </div>
-            <div className="stat">
-              <span>{todos.filter((t) => !t.isComplete).length}</span>remaining
-            </div>
-          </div>
-
-          {error && <p className="err-msg">{error}</p>}
-
-          <CreateTodoForm onCreate={handleCreate} />
-          <div className="divider" />
-
-          {loading ? (
-            <p className="loading-line">loading todos...</p>
-          ) : (
-            <TodoList
-              todos={todos}
-              onComplete={handleComplete}
-              onEdit={handleEdit}
-              onDelete={handleDelete}
-            />
-          )}
+return (
+  <div>
+    <Navbar onLogout={handleLogout} />
+    <div className="app">
+      <div className="dash">
+        <p className="welcome-msg">welcome, {userEmail}</p>
+        <div className="dash-header">
+          <h1>Dashboard</h1>
         </div>
+
+        <div className="stats">
+          <div className="stat">
+            <span>{todos.length}</span>total
+          </div>
+          <div className="stat">
+            <span>{todos.filter((t) => t.isComplete).length}</span>done
+          </div>
+          <div className="stat">
+            <span>{todos.filter((t) => !t.isComplete).length}</span>remaining
+          </div>
+        </div>
+
+        <CreateTodoForm onCreate={handleCreate} />
+        <div className="divider" />
+
+        {loading ? (
+          <p className="loading-line">loading todos...</p>
+        ) : error ? (
+          // Only show error when there is a real failure
+          <p className="err-msg">{error}</p>
+        ) : (
+          // TodoList handles the empty state internally
+          <TodoList
+            todos={todos}
+            onComplete={handleComplete}
+            onEdit={handleEdit}
+            onDelete={handleDelete}
+          />
+        )}
       </div>
     </div>
-  );
+  </div>
+);
 }
 
 export default Dashboard;
