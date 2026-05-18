@@ -111,7 +111,7 @@ All endpoints require a valid Supabase JWT token in the `Authorization: Bearer` 
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/TodoApp.git
+git clone https://github.com/marcmoxey/TodoApp.git
 cd TodoApp
 ```
 
