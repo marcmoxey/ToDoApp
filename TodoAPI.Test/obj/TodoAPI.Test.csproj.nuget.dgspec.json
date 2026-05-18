@@ -156,9 +156,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "AspNetCore.HealthChecks.SqlServer": {
+            "AspNetCore.HealthChecks.NpgSql": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[6.0.4, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
