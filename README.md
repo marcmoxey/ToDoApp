@@ -1,6 +1,6 @@
 # TodoApp
 
-A full-stack todo application built as a learning project to explore modern web development technologies across the entire stack — from backend API to frontend UI, containerisation, cloud hosting, and automated deployments.
+A full-stack todo application built as a learning project to explore modern web development technologies across the entire stack  from backend API to frontend UI, containerisation, cloud hosting, and automated deployments.
 
 ---
 
