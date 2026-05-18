@@ -1,0 +1,24 @@
+services:
+
+  dotnet-api:
+    build:
+      context: .
+      dockerfile: TodoAPI/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__postgreSQL=Host=aws-1-us-east-2.pooler.supabase.com;Database=postgres;Username=postgres.wajfsbdaxsgiwolhczww;Password=${DB_PASSWORD};SSL Mode=Require;Trust Server Certificate=true
+      - Authentication__Authority=https://wajfsbdaxsgiwolhczww.supabase.co/auth/v1
+      - Authentication__ValidIssuer=https://wajfsbdaxsgiwolhczww.supabase.co/auth/v1
+      - Authentication__ValidAudience=authenticated
+    ports:
+      - "8080:80"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - dotnet-api

@@ -1,0 +1,103 @@
+[
+  {
+    "ContainingType": "TodoAPI.Controllers.TodoController",
+    "Method": "Create",
+    "RelativePath": "api/Todo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TodoLibrary.Contracts.CreateTodoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "CreateTodo"
+  },
+  {
+    "ContainingType": "TodoAPI.Controllers.TodoController",
+    "Method": "GetAll",
+    "RelativePath": "api/Todo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "GetAllTodos"
+  },
+  {
+    "ContainingType": "TodoAPI.Controllers.TodoController",
+    "Method": "Get",
+    "RelativePath": "api/Todo/{todoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "todoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "GetOneTodo"
+  },
+  {
+    "ContainingType": "TodoAPI.Controllers.TodoController",
+    "Method": "Update",
+    "RelativePath": "api/Todo/{todoId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "todoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "TodoLibrary.Contracts.UpdateTodoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "UpdateTodoTask"
+  },
+  {
+    "ContainingType": "TodoAPI.Controllers.TodoController",
+    "Method": "Delete",
+    "RelativePath": "api/Todo/{todoId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "todoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "DeleteTodo"
+  },
+  {
+    "ContainingType": "TodoAPI.Controllers.TodoController",
+    "Method": "Complete",
+    "RelativePath": "api/Todo/{todoId}/Complete",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "todoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "CompeleteTodo"
+  }
+]

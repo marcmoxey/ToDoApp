@@ -1,0 +1,27 @@
+
+#Use the full SDK image to build and publish the app
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build 
+WORKDIR /src 
+
+# Copy solution and project files first and restore dependencies.
+# Docker caches this layer - if these files haven't changed, it skips 
+# the restore on the next build which speeds things up 
+COPY TodoApp.sln .
+COPY TodoAPI/TodoAPI.csproj TodoAPI/
+COPY TodoLibrary/TodoLibrary.csproj TodoLibrary/
+COPY TodoAPI.Test/TodoAPI.Test.csproj TodoAPI.Test/
+RUN dotnet restore
+
+# Copy the rest of the source and publish in Release mode
+COPY . . 
+RUN dotnet publish TodoAPI/TodoAPI.csproj -c Release -o /app/publish 
+
+
+# ---- Runtime Stage -----
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime 
+WORKDIR  /app 
+
+COPY --from=build /app/publish . 
+
+EXPOSE 80
+ENTRYPOINT ["dotnet", "TodoAPI.dll"]

@@ -1,0 +1,203 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "TodoAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Todo": {
+      "post": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "CreateTodo",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTodoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTodoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTodoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "GetAllTodos",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Todo/{todoId}": {
+      "get": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "GetOneTodo",
+        "parameters": [
+          {
+            "name": "todoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "UpdateTodoTask",
+        "parameters": [
+          {
+            "name": "todoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTodoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTodoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTodoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "DeleteTodo",
+        "parameters": [
+          {
+            "name": "todoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Todo/{todoId}/Complete": {
+      "put": {
+        "tags": [
+          "Todo"
+        ],
+        "operationId": "CompeleteTodo",
+        "parameters": [
+          {
+            "name": "todoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateTodoRequest": {
+        "type": "object",
+        "properties": {
+          "task": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateTodoRequest": {
+        "type": "object",
+        "properties": {
+          "task": {
+            "type": "string",
+            "nullable": true
+          },
+          "isComplete": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Enter JWT token like: Bearer {your token}",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}
