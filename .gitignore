@@ -1,1 +1,4 @@
-/.env
+.env
+frontend/.env
+**/secrets.json
+**/appsettings.Development.json

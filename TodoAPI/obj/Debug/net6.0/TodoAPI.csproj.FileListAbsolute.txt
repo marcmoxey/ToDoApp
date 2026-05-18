@@ -99,12 +99,7 @@ C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extension
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
-C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
-C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
-C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
@@ -122,9 +117,6 @@ C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Swashbuckle.AspNetC
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\System.Collections.Immutable.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
-C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\System.Text.Json.dll
-C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\TodoLibrary.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\TodoLibrary.pdb
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\obj\Debug\net6.0\TodoAPI.csproj.AssemblyReference.cache
@@ -153,8 +145,6 @@ C:\Users\moxey\source\repos\TodoApp\TodoAPI\obj\Debug\net6.0\ref\TodoAPI.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Npgsql.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\HealthChecks.NpgSql.dll
-C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
-C:\Users\moxey\source\repos\TodoApp\TodoAPI\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\moxey\source\repos\TodoApp\TodoAPI\obj\Debug\net6.0\TodoAPI.sourcelink.json
