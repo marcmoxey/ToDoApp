@@ -22,7 +22,6 @@ function Login() {
         setError(error.message);
       } else {
         // Supabase sends a confirmation email by default
-        // If you have email confirmation disabled in Supabase it logs in automatically
         setMessage(
           "Account created! Check your email to confirm your account.",
         );
@@ -61,7 +60,7 @@ function Login() {
           </div>
           <div className="field">
             <label>Password</label>
-            <input
+            <input 
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
