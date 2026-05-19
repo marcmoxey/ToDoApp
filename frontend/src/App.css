@@ -106,6 +106,30 @@ body { background: var(--bg); color: var(--text); font-family: var(--font-mono);
 .btn-primary:disabled { opacity: .45; cursor: not-allowed; }
 .err-msg { color: var(--red); font-size: .78rem; margin-top: 10px; }
 
+.success-msg {
+    color: var(--accent);
+    font-size: .78rem;
+    margin-top: 10px;
+}
+
+.toggle-auth {
+    text-align: center;
+    margin-top: 20px;
+    font-size: .75rem;
+    color: var(--muted);
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: .75rem;
+    cursor: pointer;
+    margin-left: 6px;
+    text-decoration: underline;
+}
+
 /* ── Dashboard ── */
 .dash { width: 100%; max-width: 620px; animation: fadeUp .35s ease; }
 .dash-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 20px; }
