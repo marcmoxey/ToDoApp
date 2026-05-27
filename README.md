@@ -1,4 +1,4 @@
-# TodoApp - Live here: 🌐 https://lnkd.in/e5i54WxQ
+# TodoApp - Live here: 🌐 [https://lnkd.in/e5i54WxQ](https://todo-frontend.wonderfulglacier-442230c4.eastus.azurecontainerapps.io/login)
 
 A full-stack todo application built as a learning project to explore modern web development technologies across the entire stack  from backend API to frontend UI, containerisation, cloud hosting, and automated deployments.
 
