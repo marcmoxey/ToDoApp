@@ -43,7 +43,7 @@ function Login() {
   return (
     <div className="app">
       <div className="login-wrap">
-        <h1>Todo App</h1>
+        <h1>Taskly</h1>
         <p className="sub">
           {isSignUp ? "create an account" : "sign in to continue"}
         </p>
@@ -60,7 +60,7 @@ function Login() {
           </div>
           <div className="field">
             <label>Password</label>
-            <input 
+            <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}

@@ -11,7 +11,7 @@ function Navbar({ onLogout }: Props) {
     <nav className="navbar">
       <div className="navbar-inner">
         {/* Left side — brand/app name */}
-        <span className="navbar-brand">todo.</span>
+        <span className="navbar-brand">Taskly</span>
 
         {/* Right side — navigation links */}
         <div className="navbar-links">
