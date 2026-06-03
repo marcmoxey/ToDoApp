@@ -1,4 +1,4 @@
-# TodoApp
+# Taskly - Live here: 🌐 [https://lnkd.in/e5i54WxQ](https://todo-frontend.wonderfulglacier-442230c4.eastus.azurecontainerapps.io/login)
 
 A full-stack todo application built as a learning project to explore modern web development technologies across the entire stack  from backend API to frontend UI, containerisation, cloud hosting, and automated deployments.
 
@@ -215,13 +215,13 @@ External Services
 Using Nginx to proxy `/api` requests means the browser only ever talks to one origin so CORS configuration is not needed in the .NET API. This is cleaner than managing allowed origins across two places.
 
 **Why EF InMemory for service tests and Moq for controller tests?**
-The service tests use EF InMemory because the database logic is exactly what is being tested — mocking DbSet with Moq is notoriously painful. The controller tests use Moq because data access is irrelevant at that layer — only the HTTP response behaviour matters.
+The service tests use EF InMemory because the database logic is exactly what is being tested  mocking DbSet with Moq is notoriously painful. The controller tests use Moq because data access is irrelevant at that layer only the HTTP response behaviour matters.
 
 **Why Supabase for both auth and the database?**
 Since Supabase was already being used for JWT authentication, using its built-in PostgreSQL database eliminated the need to host a separate Postgres container in Azure, reducing hosting costs significantly.
 
 **Why Docker Compose for local dev but not a local database?**
-The database lives in Supabase in both local and production environments. This means local and production are identical in terms of data access — no surprises when deploying because the same database is used throughout development.
+The database lives in Supabase in both local and production environments. This means local and production are identical in terms of data access  no surprises when deploying because the same database is used throughout development.
 
 ---
 
